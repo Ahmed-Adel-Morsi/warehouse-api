@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const cors = require("cors"); // Add this line
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
@@ -67,8 +67,10 @@ app.delete("/api/:collection/:id", (req, res) => {
   }
 });
 
-// app.listen(5000, () => {
-//   console.log("start the server");
-// });
+const port = 8080 || process.env.PORT;
+
+app.listen(port, () => {
+  console.log("Server is Running...");
+});
 
 module.exports = app;
