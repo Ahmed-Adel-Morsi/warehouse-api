@@ -27,12 +27,17 @@ app.get("/api/:collection", (req, res) => {
 });
 
 app.post("/api/:collection", (req, res) => {
-  const { collection } = req.params;
-  const newItem = req.body;
-  const data = getData();
-  data[collection].push(newItem);
-  saveData(data);
-  res.status(201).json(newItem);
+  try {
+    const { collection } = req.params;
+    const newItem = req.body;
+    const data = getData();
+    data[collection].push(newItem);
+    saveData(data);
+    res.status(201).json(newItem);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.put("/api/:collection/:id", (req, res) => {
