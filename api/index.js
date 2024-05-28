@@ -1,10 +1,16 @@
-// api/index.js
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors"); // Add this line
 
 const app = express();
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "https://mywarehouse.vercel.app",
+  })
+);
 
 const getData = () =>
   JSON.parse(fs.readFileSync(path.join(__dirname, "db.json")));
