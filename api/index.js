@@ -8,8 +8,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
-    // origin: "https://mywarehouse.vercel.app",
+    origin: "https://mywarehouse.vercel.app",
   })
 );
 
@@ -62,5 +61,9 @@ app.delete("/api/:collection/:id", (req, res) => {
     res.status(404).send("Item not found");
   }
 });
+
+// app.listen(5000, () => {
+//   console.log("start the server");
+// });
 
 module.exports = app;
