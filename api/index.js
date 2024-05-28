@@ -8,7 +8,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://mywarehouse.vercel.app",
+    origin: "*",
+    // origin: "https://mywarehouse.vercel.app",
   })
 );
 
@@ -21,7 +22,6 @@ const saveData = (data) =>
   );
 
 app.get("/api/:collection", (req, res) => {
-  console.log("GET request received");
   const { collection } = req.params;
   const data = getData();
   res.json(data[collection] || []);
