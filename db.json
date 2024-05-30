@@ -25,81 +25,74 @@
       "price": 1000
     },
     {
-      "id": "d4c1",
-      "name": "ss",
-      "code": "123",
+      "name": "السي",
+      "code": "32",
       "brand": "",
       "size": "",
       "color": "",
       "location": "",
       "countryOfOrigin": "",
       "quantity": "",
-      "price": ""
+      "price": "",
+      "id": "1717029159146-670"
+    },
+    {
+      "name": "بلش",
+      "code": "342",
+      "brand": "سشي",
+      "size": "",
+      "color": "",
+      "location": "",
+      "countryOfOrigin": "",
+      "quantity": "",
+      "price": "342",
+      "id": "1717029175331-489"
     }
   ],
   "customers": [
     {
-      "id": "b7ec",
       "name": "Ahmed Adel",
-      "phoneNumber": "12345",
-      "address": "EGYPT",
-      "code": 1
-    },
-    {
-      "id": "8634",
-      "name": "Omer",
       "phoneNumber": "",
       "address": "",
-      "code": 3
+      "code": 1,
+      "id": "1717024183878-465"
     },
     {
-      "id": "c5ed",
-      "name": "weq",
-      "phoneNumber": "",
-      "address": "",
-      "code": 4
-    },
-    {
-      "id": "9c58",
-      "name": "eqwe",
-      "phoneNumber": "",
-      "address": "",
-      "code": 5
-    },
-    {
-      "id": "5079",
-      "name": "eqwe",
-      "phoneNumber": "",
-      "address": "",
-      "code": 6
-    },
-    {
-      "name": "qwe",
-      "phoneNumber": "",
-      "address": "",
-      "code": 7
-    },
-    {
-      "name": "welcome",
-      "phoneNumber": "",
-      "address": "",
-      "code": 8
+      "name": "ابيس",
+      "phoneNumber": "834927",
+      "address": "25hsd",
+      "code": 2,
+      "id": "1717029150998-582"
     }
   ],
   "vendors": [
     {
-      "id": "46e5",
-      "name": "Ahmed",
-      "code": 2,
-      "phoneNumber": "+201019540239",
-      "address": "12"
+      "name": "rty",
+      "phoneNumber": "",
+      "address": "",
+      "code": 1,
+      "id": "1717022720689-231"
     },
     {
-      "id": "1ffa",
-      "name": "Mohamed",
-      "phoneNumber": "1235555",
-      "address": "123555555",
-      "code": 5
+      "name": "wqe",
+      "phoneNumber": "0104375",
+      "address": "FFD",
+      "code": 2,
+      "id": "1717023299567-915"
+    },
+    {
+      "name": "jkf",
+      "phoneNumber": "564",
+      "address": "",
+      "code": 3,
+      "id": "1717027500713-247"
+    },
+    {
+      "name": "البي",
+      "phoneNumber": "",
+      "address": "",
+      "code": 4,
+      "id": "1717029166805-899"
     }
   ]
 }

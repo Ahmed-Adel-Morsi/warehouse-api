@@ -20,17 +20,25 @@ const saveData = (data) =>
     JSON.stringify(data, null, 2)
   );
 
-app.get("/api/:collection", (req, res) => {
+app.get("/:collection", (req, res) => {
   const { collection } = req.params;
   const data = getData();
   res.json(data[collection] || []);
 });
 
-app.post("/api/:collection", (req, res) => {
+const generateId = () => {
+  return `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+};
+
+app.post("/:collection", (req, res) => {
   try {
     const { collection } = req.params;
     const newItem = req.body;
+    newItem.id = generateId();
     const data = getData();
+    if (!data[collection]) {
+      data[collection] = [];
+    }
     data[collection].push(newItem);
     saveData(data);
     res.status(201).json(newItem);
@@ -40,7 +48,7 @@ app.post("/api/:collection", (req, res) => {
   }
 });
 
-app.put("/api/:collection/:id", (req, res) => {
+app.put("/:collection/:id", (req, res) => {
   const { collection, id } = req.params;
   const updatedItem = req.body;
   const data = getData();
@@ -54,7 +62,7 @@ app.put("/api/:collection/:id", (req, res) => {
   }
 });
 
-app.delete("/api/:collection/:id", (req, res) => {
+app.delete("/:collection/:id", (req, res) => {
   const { collection, id } = req.params;
   const data = getData();
   const index = data[collection].findIndex((item) => item.id === id);
