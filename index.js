@@ -30,11 +30,20 @@ const generateId = () => {
   return `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
 };
 
+const getDateNow = () => {
+  return new Date().toISOString();
+};
+
 app.post("/:collection", (req, res) => {
   try {
     const { collection } = req.params;
-    const newItem = req.body;
-    newItem.id = generateId();
+    const date = getDateNow();
+    const newItem = {
+      id: generateId(),
+      ...req.body,
+      createdAt: date,
+      updatedAt: date,
+    };
     const data = getData();
     if (!data[collection]) {
       data[collection] = [];
@@ -51,6 +60,7 @@ app.post("/:collection", (req, res) => {
 app.put("/:collection/:id", (req, res) => {
   const { collection, id } = req.params;
   const updatedItem = req.body;
+  updatedItem.updatedAt = getDateNow();
   const data = getData();
   const index = data[collection].findIndex((item) => item.id === id);
   if (index !== -1) {

@@ -5,12 +5,13 @@
       "name": "Iphone 13",
       "code": "A1",
       "brand": "Applee",
-      "size": "222",
+      "size": 222,
       "color": "Blaack",
       "location": "QQ",
       "countryOfOrigin": "KSAA",
-      "quantity": 10,
-      "price": "1001"
+      "quantity": 5,
+      "price": 1001,
+      "updatedAt": "2024-06-03T04:44:03.713Z"
     },
     {
       "id": "2",
@@ -23,30 +24,6 @@
       "countryOfOrigin": "KSA",
       "quantity": 10,
       "price": 1000
-    },
-    {
-      "name": "السي",
-      "code": "32",
-      "brand": "",
-      "size": "",
-      "color": "",
-      "location": "",
-      "countryOfOrigin": "",
-      "quantity": "",
-      "price": "",
-      "id": "1717029159146-670"
-    },
-    {
-      "name": "بلش",
-      "code": "342",
-      "brand": "سشي",
-      "size": "",
-      "color": "",
-      "location": "",
-      "countryOfOrigin": "",
-      "quantity": "",
-      "price": "342",
-      "id": "1717029175331-489"
     }
   ],
   "customers": [
@@ -79,20 +56,60 @@
       "address": "FFD",
       "code": 2,
       "id": "1717023299567-915"
-    },
+    }
+  ],
+  "transactions": [
     {
-      "name": "jkf",
-      "phoneNumber": "564",
-      "address": "",
-      "code": 3,
-      "id": "1717027500713-247"
-    },
+      "id": "1717389843707-175",
+      "transactionType": "sell",
+      "quantity": "5",
+      "price": "1000",
+      "totalPrice": 5000,
+      "productDetails": {
+        "id": "1",
+        "name": "Iphone 13",
+        "code": "A1",
+        "brand": "Applee",
+        "size": 222,
+        "color": "Blaack",
+        "location": "QQ",
+        "countryOfOrigin": "KSAA",
+        "quantity": 10,
+        "price": 1001
+      },
+      "customerDetails": {
+        "name": "Ahmed Adel",
+        "phoneNumber": "",
+        "address": "",
+        "code": 1,
+        "id": "1717024183878-465"
+      },
+      "createdAt": "2024-06-03T04:44:03.707Z",
+      "updatedAt": "2024-06-03T04:44:03.707Z"
+    }
+  ],
+  "soldInvoices": [
     {
-      "name": "البي",
-      "phoneNumber": "",
-      "address": "",
-      "code": 4,
-      "id": "1717029166805-899"
+      "id": "",
+      "date": "",
+      "invoiceNumber": "",
+      "customerId": "",
+      "customerName": "",
+      "customerPhoneNumber": "",
+      "customerAddress": "",
+      "customerCode": 0
+    }
+  ],
+  "additionInvoices": [
+    {
+      "id": "",
+      "date": "",
+      "invoiceNumber": "",
+      "vendorId": "",
+      "vendorName": "",
+      "vendorPhoneNumber": "",
+      "vendorAddress": "",
+      "vendorCode": 0
     }
   ]
 }
