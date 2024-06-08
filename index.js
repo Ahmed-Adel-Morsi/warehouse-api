@@ -31,7 +31,7 @@ const generateId = () => {
 };
 
 const getDateNow = () => {
-  return new Date().toISOString();
+  return new Date();
 };
 
 app.post("/:collection", (req, res) => {
