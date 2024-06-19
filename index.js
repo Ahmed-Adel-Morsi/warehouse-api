@@ -26,13 +26,8 @@ app.get("/:collection", (req, res) => {
   res.json(data[collection] || []);
 });
 
-const generateId = () => {
-  return `${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-};
-
-const getDateNow = () => {
-  return new Date();
-};
+const generateId = () => `${Date.now()}${Math.floor(Math.random() * 1000)}`;
+const getDateNow = () => new Date();
 
 app.post("/:collection", (req, res) => {
   try {
